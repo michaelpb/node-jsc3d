@@ -1,7 +1,7 @@
 {
   "name": "jsc3d",
-  "version": "0.1.4",
-  "description": "Node canvas port of JSC3D software model renderer, with CLI interface to render 3D models ",
+  "version": "0.1.5",
+  "description": "Node port of JSC3D software 3D renderer with CLI interface",
   "main": "index.js",
   "scripts": {},
   "bin": "bin/jsc3d.js",
@@ -21,6 +21,7 @@
   ],
   "author": "michaelb",
   "license": "MIT",
+  "engine": {"node": ">=0.6.0"},
   "bugs": {
     "url": "https://github.com/michaelpb/node-jsc3d/issues"
   },

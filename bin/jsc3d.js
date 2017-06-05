@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 'use strict';
 
 const jsc3d = require('../index');
