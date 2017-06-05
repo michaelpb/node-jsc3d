@@ -30,9 +30,6 @@ function simpleParseArgs(args) {
 }
 
 const {positional, named} = simpleParseArgs(process.argv);
-console.log(
-    {positional, named}
-);
 
 const inputPath = positional[0];
 const outputPath = positional[1];
