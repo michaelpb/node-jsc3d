@@ -1,10 +1,11 @@
 {
   "name": "node-jsc3d",
-  "version": "0.1.0",
-  "description": "Node canvas port of JSC3D software model renderer",
+  "version": "0.1.1",
+  "description": "Node canvas port of JSC3D software model renderer, with CLI interface to render 3D models ",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "scripts": {},
+  "bin": {
+    "jsc3d": "bin/jsc3d.js"
   },
   "repository": {
     "type": "git",
@@ -12,6 +13,12 @@
   },
   "keywords": [
     "node",
+    "jsc3d",
+    "render",
+    "model",
+    "stl",
+    "obj",
+    "rasterize",
     "3d"
   ],
   "author": "michaelb",
