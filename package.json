@@ -1,6 +1,6 @@
 {
   "name": "jsc3d",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Node canvas port of JSC3D software model renderer, with CLI interface to render 3D models ",
   "main": "index.js",
   "scripts": {},
