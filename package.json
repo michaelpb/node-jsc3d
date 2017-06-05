@@ -1,6 +1,6 @@
 {
   "name": "jsc3d",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Node port of JSC3D software 3D renderer with CLI interface",
   "main": "index.js",
   "scripts": {},

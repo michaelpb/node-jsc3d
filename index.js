@@ -114,7 +114,7 @@ const sandbox = {
 };
 
 const context = new vm.createContext(sandbox);
-const jsc3dLoader = new vm.Script(fs.readFileSync('./assets/jsc3d.js'));
+const jsc3dLoader = new vm.Script(fs.readFileSync(SCRIPT_PATH));
 jsc3dLoader.runInContext(context);
 module.exports = JSC3D;
 module.exports.sandbox = sandbox;
