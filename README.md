@@ -68,13 +68,13 @@ viewer.init();
 
 Install globally with
 
-```bash
+```
 npm install -g jsc3d
 ```
 
 ### Solid render
 
-```bash
+```
 jsc3d examples/example.stl examples/example.png
 ```
 ![Example default render](examples/example.png)
@@ -83,7 +83,7 @@ jsc3d examples/example.stl examples/example.png
 
 This node wrapper exposes all arguments as CLI arguments, also.
 
-```bash
+```
 jsc3d --ModelColor=#00ff00 --RenderMode=wireframe --BackgroundColor1=#000000 \
     --BackgroundColor2=#000000 examples/example.stl examples/example_wireframe.png
 ```
