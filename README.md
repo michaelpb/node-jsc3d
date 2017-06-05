@@ -29,7 +29,7 @@ Provides a few helper methods, notably `render`, for more easily
 interacting with JSC3D.  See `bin/jsc3d.js` for full example of using
 `render`.
 
-```
+```javascript
 const jsc3d = require('jsc3d');
 const canvas = jsc3d.makeCairoCanvas(500, 500);
 jsc3d.render({canvas}, () => {
