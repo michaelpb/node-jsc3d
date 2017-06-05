@@ -12,7 +12,7 @@ simple interface, great for generating previews of STL or OBJ files.
 
 Install locally with:
 
-```
+```sh
 npm install --save jsc3d
 ```
 
@@ -47,7 +47,7 @@ jsc3d.render({canvas}, () => {
 The original [JSC3D API](https://github.com/xxv/jsc3d/tree/master/jsc3d/docs) is also
 directly exposed.
 
-```
+```javascript
 const jsc3d = require('jsc3d');
 const canvas = jsc3d.makeCairoCanvas(500, 500);
 const viewer = new jsc3d.Viewer(canvas);
@@ -68,13 +68,13 @@ viewer.init();
 
 Install globally with
 
-```
+```bash
 npm install -g jsc3d
 ```
 
 ### Solid render
 
-```
+```bash
 jsc3d examples/example.stl examples/example.png
 ```
 ![Example default render](examples/example.png)
@@ -83,7 +83,7 @@ jsc3d examples/example.stl examples/example.png
 
 This node wrapper exposes all arguments as CLI arguments, also.
 
-```
+```bash
 jsc3d --ModelColor=#00ff00 --RenderMode=wireframe --BackgroundColor1=#000000 \
     --BackgroundColor2=#000000 examples/example.stl examples/example_wireframe.png
 ```
@@ -95,11 +95,11 @@ To match JSC3D, this wrapper is also released under MIT License.
 
 # TODO
 
--[ ] Background images do not load: need to mock HTML Image interface
+- [ ] Background images do not load: need to mock HTML Image interface
 
--[ ] Implement new, simpler mock canvas using Buffer to avoid Cairo
+- [ ] Implement new, simpler mock canvas using Buffer to avoid Cairo
 dependency
 
--[ ] Monkey patch JSC3D's BinaryStream with a faster implementation
+- [ ] Monkey patch JSC3D's BinaryStream with a faster implementation
 using Buffer
 
