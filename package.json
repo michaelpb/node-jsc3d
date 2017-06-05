@@ -1,0 +1,26 @@
+{
+  "name": "node-jsc3d",
+  "version": "0.1.0",
+  "description": "Node canvas port of JSC3D software model renderer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/michaelpb/node-jsc3d.git"
+  },
+  "keywords": [
+    "node",
+    "3d"
+  ],
+  "author": "michaelb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michaelpb/node-jsc3d/issues"
+  },
+  "homepage": "https://github.com/michaelpb/node-jsc3d#readme",
+  "dependencies": {
+    "canvas": "1.6.5"
+  }
+}
