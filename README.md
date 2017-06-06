@@ -44,8 +44,8 @@ jsc3d.render({canvas}, () => {
 
 ### Using JSC3D directly
 
-The original [JSC3D API](https://github.com/xxv/jsc3d/tree/master/jsc3d/docs) is also
-directly exposed.
+The original [JSC3D API](https://github.com/xxv/jsc3d/tree/master/jsc3d/docs)
+is also directly exposed.
 
 ```javascript
 const jsc3d = require('jsc3d');
@@ -100,10 +100,12 @@ To match JSC3D, this wrapper is also released under MIT License.
 
 # TODO
 
+- [ ] Need to support binary STL files
+
 - [ ] Background images do not load: need to mock HTML Image interface
 
-- [ ] Implement new, simpler mock canvas using Buffer to avoid Cairo
-dependency
+- [ ] Implement new, faster, simpler mock canvas using Buffer to avoid Cairo
+  dependency and be 100% JS
 
 - [ ] Monkey patch JSC3D's BinaryStream with a faster implementation
 using Buffer
