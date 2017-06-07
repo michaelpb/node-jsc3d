@@ -8,6 +8,9 @@ the browser.
 Supports in-memory, software rendering of certain 3D Models with a
 simple interface, great for generating previews of STL or OBJ files.
 
+
+[Here's a blog post about how I ported it.](http://michaelb.org/porting-a-legacy-browserjs3cd-to-node-js-with-node-canvas/)
+
 # Usage
 
 Install locally with:
