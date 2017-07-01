@@ -71,7 +71,7 @@ const JSC3D = {
     },
 
     render: (parameters, callback) => {
-        const {canvas} = parameters;
+        const canvas = parameters.canvas;
         const viewer = new JSC3D.Viewer(canvas);
         for (const name of Object.keys(parameters)) {
             if (name === 'canvas') {
@@ -96,6 +96,16 @@ const JSC3D = {
         for (const callback of JSC3D.onLoadedCallbacks) {
             callback(path);
         }
+    },
+
+    setSandboxWindow: newWindow => {
+        // Overrides the sandbox, useful if it is to be used in a real or
+        // somewhat real window context
+        const keys = ['document', 'encodeURI', 'setTimeout', 'XMLHttpRequest'];
+        for (const key in keys) {
+            sandbox[key] = newWindow[key];
+        }
+        sandbox.window = newWindow;
     },
 };
 

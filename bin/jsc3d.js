@@ -20,7 +20,7 @@ function simpleParseArgs(args) {
     }
 
     // Get rid of self
-    if (positional[0].match(/node$/)) {
+    if (positional[0].match(/nodej?s?$/)) {
         positional.shift();
     }
     if (positional[0].match(/jsc3d.?j?s?$/)) {
@@ -29,33 +29,36 @@ function simpleParseArgs(args) {
     return {positional, named};
 }
 
-const {positional, named} = simpleParseArgs(process.argv);
+function main() {
+    const args = simpleParseArgs(process.argv);
 
-const inputPath = positional[0];
-const outputPath = positional[1];
-// console.log("Rendering ", inputPath, " to ", outputPath);
+    const inputPath = args.positional[0];
+    const outputPath = args.positional[1];
+    // console.log("Rendering ", inputPath, " to ", outputPath);
 
-const canvas = jsc3d.makeCairoCanvas(500, 500);
-const parameters = Object.assign({
-    canvas,
-    SceneUrl: inputPath,
-    InitRotationX: 45,
-    InitRotationY: -45,
-    InitRotationZ: -135,
-    ModelColor: '#ffffff',
-    BackgroundColor1: '#ffffff',
-    BackgroundColor2: '#ffffff',
-    ProgressBar: 'off',
-    RenderMode: 'flat',
-    Definition: 'high',
-}, named);
+    const canvas = jsc3d.makeCairoCanvas(500, 500);
+    const parameters = Object.assign({
+        canvas,
+        SceneUrl: inputPath,
+        InitRotationX: 45,
+        InitRotationY: -45,
+        InitRotationZ: -135,
+        ModelColor: '#ffffff',
+        BackgroundColor1: '#ffffff',
+        BackgroundColor2: '#ffffff',
+        ProgressBar: 'off',
+        RenderMode: 'flat',
+        Definition: 'high',
+    }, args.named);
 
-jsc3d.render(parameters, () => {
-    const buf = canvas.toBuffer(undefined, 3, canvas.PNG_FILTER_NONE);
-    fs.writeFile(outputPath, buf, error => {
-        if (error) {
-            throw error;
-        }
+    jsc3d.render(parameters, () => {
+        const buf = canvas.toBuffer(undefined, 3, canvas.PNG_FILTER_NONE);
+        fs.writeFile(outputPath, buf, error => {
+            if (error) {
+                throw error;
+            }
+        });
     });
-});
+}
 
+main();
